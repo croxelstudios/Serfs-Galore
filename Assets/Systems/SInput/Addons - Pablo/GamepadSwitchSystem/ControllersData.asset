@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b39f167cc361148bf54500d4c4d5f8, type: 3}
+  m_Name: ControllersData
+  m_EditorClassIdentifier: 
+  controllers:
+  - mappings:
+    - {fileID: 11400000, guid: 575f1931c247c4260ab971dc69b29bba, type: 2}
+  - mappings:
+    - {fileID: 11400000, guid: a8cd155e6dffe4d94be738fbc9350ba4, type: 2}
+    - {fileID: 11400000, guid: ac6566b856d4bc748aa53ceac2a4c0ea, type: 2}
+  - mappings:
+    - {fileID: 11400000, guid: 824ea76a7cd1a40d18481f4dfbb85169, type: 2}
+    - {fileID: 11400000, guid: 128e1d831a0a1fa4ca6255eb435ed0d2, type: 2}
+  - mappings:
+    - {fileID: 11400000, guid: 9e18a9fa44bd44b648306c1b2652e191, type: 2}
+    - {fileID: 11400000, guid: f892f0dee01572b4c8e35f52cb69ff11, type: 2}

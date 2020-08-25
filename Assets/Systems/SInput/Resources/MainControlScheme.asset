@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93664c924306149c9abd8698e3655c26, type: 3}
+  m_Name: MainControlScheme
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Left
+    keyboardInputs: 0500000004000000
+    gamepadInputs: 0f0000000b000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Right
+    keyboardInputs: 0800000003000000
+    gamepadInputs: 100000000c000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Up
+    keyboardInputs: 1b00000001000000
+    gamepadInputs: 110000000d000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Down
+    keyboardInputs: 1700000002000000
+    gamepadInputs: 120000000e000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Jump
+    keyboardInputs: 33000000
+    gamepadInputs: 01000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Fire1
+    keyboardInputs: 22000000
+    gamepadInputs: 08000000
+    mouseInputs: 0c000000
+    virtualInputs: []
+  - name: Fire2
+    keyboardInputs: 24000000
+    gamepadInputs: 06000000
+    mouseInputs: 0d000000
+    virtualInputs: []
+  - name: Fire3
+    keyboardInputs: 20000000
+    gamepadInputs: 05000000
+    mouseInputs: 0e000000
+    virtualInputs: []
+  - name: Look Joystick Left
+    keyboardInputs: 
+    gamepadInputs: 13000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Look Joystick Right
+    keyboardInputs: 
+    gamepadInputs: 14000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Look Joystick Up
+    keyboardInputs: 
+    gamepadInputs: 15000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Look Joystick Down
+    keyboardInputs: 
+    gamepadInputs: 16000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Submit
+    keyboardInputs: 33000000
+    gamepadInputs: 01000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Cancel
+    keyboardInputs: 32000000
+    gamepadInputs: 02000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Join
+    keyboardInputs: 30000000
+    gamepadInputs: 17000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: Next
+    keyboardInputs: 33000000
+    gamepadInputs: 
+    mouseInputs: 
+    virtualInputs: []
+  - name: Look Mouse Left
+    keyboardInputs: 
+    gamepadInputs: 
+    mouseInputs: 01000000
+    virtualInputs: []
+  - name: Look Mouse Right
+    keyboardInputs: 
+    gamepadInputs: 
+    mouseInputs: 02000000
+    virtualInputs: []
+  - name: Look Mouse Up
+    keyboardInputs: 
+    gamepadInputs: 
+    mouseInputs: 03000000
+    virtualInputs: []
+  - name: Look Mouse Down
+    keyboardInputs: 
+    gamepadInputs: 
+    mouseInputs: 04000000
+    virtualInputs: []
+  - name: Pause
+    keyboardInputs: 32000000
+    gamepadInputs: 17000000
+    mouseInputs: 
+    virtualInputs: []
+  - name: MouseMovement
+    keyboardInputs: 
+    gamepadInputs: 
+    mouseInputs: 01000000020000000400000003000000
+    virtualInputs: []
+  - name: Restart
+    keyboardInputs: 2200000021000000
+    gamepadInputs: 18000000
+    mouseInputs: 
+    virtualInputs: []
+  smartControls:
+  - name: Horizontal
+    positiveControl: Right
+    negativeControl: Left
+    deadzone: 0.1
+    gravity: 10000
+    speed: 10000
+    snap: 0
+    scale: 10000
+    invert: 0
+  - name: Vertical
+    positiveControl: Up
+    negativeControl: Down
+    deadzone: 0.1
+    gravity: 10000
+    speed: 10000
+    snap: 0
+    scale: 10000
+    invert: 0
+  - name: Look Joystick Horizontal
+    positiveControl: Look Joystick Right
+    negativeControl: Look Joystick Left
+    deadzone: 0.1
+    gravity: 3
+    speed: 3
+    snap: 0
+    scale: 1
+    invert: 0
+  - name: Look Joystick Vertical
+    positiveControl: Look Joystick Up
+    negativeControl: Look Joystick Down
+    deadzone: 0.1
+    gravity: 3
+    speed: 3
+    snap: 0
+    scale: 1
+    invert: 0
+  - name: Look Mouse Horizontal
+    positiveControl: Look Mouse Right
+    negativeControl: Look Mouse Left
+    deadzone: 0.001
+    gravity: 3
+    speed: 3
+    snap: 0
+    scale: 0.5
+    invert: 0
+  - name: Look Mouse Vertical
+    positiveControl: Look Mouse Up
+    negativeControl: Look Mouse Down
+    deadzone: 0.001
+    gravity: 3
+    speed: 3
+    snap: 0
+    scale: 0.5
+    invert: 0
