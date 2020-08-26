@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 3055749445325993564}
   m_Layer: 0
   m_Name: House
-  m_TagString: SolidWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

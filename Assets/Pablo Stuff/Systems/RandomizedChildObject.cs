@@ -16,7 +16,8 @@ public class RandomizedChildObject : MonoBehaviour
             int r = Random.Range(0, rotations.Length);
             rotation = Quaternion.Euler(rotations[r]);
         }
-        Instantiate(prefabs[p], transform.position +
-            transform.TransformVector(prefabs[p].transform.position), rotation, transform);
+        GameObject child = Instantiate(prefabs[p], transform.position +
+            transform.TransformVector(prefabs[p].transform.position), Quaternion.identity, transform);
+        child.transform.localRotation = rotation * prefabs[p].transform.rotation;
     }
 }

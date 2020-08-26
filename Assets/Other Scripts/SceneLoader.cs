@@ -18,6 +18,8 @@ public class SceneLoader : MonoBehaviour
     private bool activateSceneOnLoad = false;
     [SerializeField]
     private bool loadOnStart = false;
+    [SerializeField]
+    private bool unloadCurrentSceneAfterLoad = false;
     private AsyncOperation asyncOperation;
     public UnityEvent onSceneLoaded;
     public FloatEvent onLoadingProgressChange;
@@ -34,8 +36,6 @@ public class SceneLoader : MonoBehaviour
 
     private void Update()
     {
-        
-
 
         if (async && asyncOperation!=null)
         {
@@ -68,6 +68,10 @@ public class SceneLoader : MonoBehaviour
 
     private void SceneLoaded(AsyncOperation obj)
     {
+        if (unloadCurrentSceneAfterLoad && activateSceneOnLoad)
+        {
+            UnloadScene();
+        }
         onSceneLoaded?.Invoke();
     }
 
@@ -83,6 +87,12 @@ public class SceneLoader : MonoBehaviour
     [ContextMenu("GoToAsyncLoadedScene")]
     public void GoToAsyncLoadedScene()
     {
+        if (unloadCurrentSceneAfterLoad && !activateSceneOnLoad)
+        {
+            UnloadScene();
+        }
+
+
         if (asyncOperation != null)
         {
             asyncOperation.allowSceneActivation = true;
@@ -92,6 +102,11 @@ public class SceneLoader : MonoBehaviour
     public float GetLoadProgress()
     {
         return asyncOperation.progress;
+    }
+
+    public void UnloadScene()
+    {
+        SceneManager.UnloadSceneAsync(gameObject.scene);
     }
 
     [Serializable]

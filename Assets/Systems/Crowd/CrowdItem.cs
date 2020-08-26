@@ -126,21 +126,15 @@ public class CrowdItem : MonoBehaviour
     {
         if (interactingElements.Count >= amountToGrab)
         {
-            MoveToCenterOfInteracting();
+            if (!grabbed) onGrabbed?.Invoke();
             grabbed = true;
-            grabbing = true;
-            c.currentItem = this;
-        }
-
-        if (grabbing && grabbed)
-        {
-            grabbing = false;
-            onGrabbed?.Invoke();
 
             foreach(Transform t in interactingElements)
             {
                 t.GetComponent<CrowdElement>().carryingItem = true;
             }
+            c.currentItem = this;
+            MoveToCenterOfInteracting();
         }
     }
 

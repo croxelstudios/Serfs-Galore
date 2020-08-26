@@ -877,6 +877,7 @@ MonoBehaviour:
   async: 1
   activateSceneOnLoad: 1
   loadOnStart: 0
+  unloadCurrentSceneAfterLoad: 1
   onSceneLoaded:
     m_PersistentCalls:
       m_Calls: []

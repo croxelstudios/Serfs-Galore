@@ -2135,6 +2135,7 @@ GameObject:
   - component: {fileID: 8226737507289143009}
   - component: {fileID: 2018182810262802405}
   - component: {fileID: 1696172693854938267}
+  - component: {fileID: 5287665910597212376}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -2266,8 +2267,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2018182810262802405}
-        m_MethodName: SceneRestart
+      - m_Target: {fileID: 1696172693854938267}
+        m_MethodName: GoScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2280,6 +2281,17 @@ MonoBehaviour:
       - m_Target: {fileID: 8226737507289143009}
         m_MethodName: set_interactable
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5287665910597212376}
+        m_MethodName: SetMusicLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2315,6 +2327,18 @@ MonoBehaviour:
   scene:
     sceneAsset: {fileID: 102900000, guid: 5cb37ee0b0cb1184c8f802293f87b3fc, type: 3}
     scenePath: Assets/Scenes/LoadingScene.unity
+--- !u!114 &5287665910597212376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818295259494803271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cfe4537d6ceaad4da17fc5408972bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8025743062551022921
 GameObject:
   m_ObjectHideFlags: 0

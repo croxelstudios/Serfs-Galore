@@ -10,19 +10,13 @@ public class ForceOnAwake : MonoBehaviour
     [SerializeField]
     bool random = false;
     [SerializeField]
-    float magnitude = 1;
+    float magnitude = 1f;
     [SerializeField]
-    float upForceMultiplier = 1;
+    float upForceMultiplier = 1f;
 
     private void Awake()
     {
-        if (random)
-        {
-            GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1, 1), Random.Range(0, 1*upForceMultiplier), Random.Range(-1, 1))*magnitude);
-        }
-        else
-        {
-            GetComponent<Rigidbody>().AddForce(forceDirection * magnitude);
-        }
+        if (random) forceDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(0f, upForceMultiplier), Random.Range(-1f, 1f));
+        GetComponent<Rigidbody>().AddForce(forceDirection * magnitude);
     }
 }

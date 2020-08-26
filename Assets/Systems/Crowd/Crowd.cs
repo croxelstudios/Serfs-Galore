@@ -44,8 +44,13 @@ public class Crowd : MonoBehaviour
     private void Awake()
     {
         ctg = GameObject.FindGameObjectWithTag(ctgTag).GetComponent<CinemachineTargetGroup>();
-        followPoint = Instantiate(new GameObject(), transform).transform;
         
+        //Pablo cambió esto
+        GameObject followPointGO = new GameObject();
+        followPointGO.name = "FollowPoint";
+        followPoint = followPointGO.transform;
+        followPoint.parent = transform;
+        followPoint.localPosition = Vector3.zero;
     }
 
     private void FixedUpdate()
@@ -113,7 +118,7 @@ public class Crowd : MonoBehaviour
             CrowdObjective co = target.parent.GetComponentInChildren<CrowdObjective>();
             if (co)
             {
-                if (currentItem.objective.parent == target.parent)
+                if (currentItem && (currentItem.objective.parent == target.parent))
                 {
                     List<CrowdElement> ceToRemove = new List<CrowdElement>();
                     for (int i = 0; i < followingCrowd.Count; i++)
@@ -133,18 +138,34 @@ public class Crowd : MonoBehaviour
             }
             else
             {
-                if (followingCrowd.Count > 0 && followingCrowd.Count > CountCarryingElements())
+                if (crowd.Count > 0 && crowd.Count > CountCarryingElements())//Pablo: Ponía followingCrowd antes ambas veces en vez de crowd
                 {
-
+                    // Pablo ha tocao esto
+                    bool noFollowerAvailable = true;
+                    //
                     foreach (CrowdElement cee in followingCrowd)
                     {
                         if (!cee.carryingItem)
                         {
                             cee.AssignNewTarget(target);
                             followingCrowd.Remove(cee);
+                            //
+                            noFollowerAvailable = false;
+                            //
                             break;
                         }
                     }
+                    //
+                    if (noFollowerAvailable)
+                        foreach (CrowdElement cee in crowd)
+                        {
+                            if (!cee.carryingItem)
+                            {
+                                cee.AssignNewTarget(target);
+                                break;
+                            }
+                        }
+                    //
                 }
             }
         }
@@ -167,7 +188,6 @@ public class Crowd : MonoBehaviour
                 currentItem.Drop();
             }
         }
-        
     }
 
     int CountCarryingElements()

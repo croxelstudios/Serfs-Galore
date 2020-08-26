@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class MouseRaycast : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class MouseRaycast : MonoBehaviour
         if (!justChangeCursor)
         {
             crosshairInstance = Instantiate(crosshairPrefab);
+            SceneManager.MoveGameObjectToScene(crosshairInstance, gameObject.scene);
             crosshairInstance.SetActive(false);
         }
     }
